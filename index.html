@@ -63,7 +63,7 @@
 </div>
 <!-- calculate -->
 <div class="text-center p-2">
-    <button id="calc-btn" class="text-center px-4 border-0 fs-4  text-white creat-bg-primary rounded-3">Calculate</button>
+    <button onclick="calcBtn()" class="text-center px-4 border-0 fs-4  text-white creat-bg-primary rounded-3">Calculate</button>
 </div>
 <div class="text-center p-2">
     <p class="fw-bold fs-5">Total Expenses: <span id="total-expenses"> 7000</span></p>
@@ -72,15 +72,15 @@
 <!--  saving section --> 
 <div class="row">
     <div class="col-sm-12 col-lg-12 d-flex justify-content-around">
-        <h5>Save:</h5> <input class="creat-input-color rounded-3 border-0" type="text" name="" id="">
+        <h5>Save:</h5> <input id="save-id" class="creat-input-color rounded-3 border-0" type="text" name="" id="">
         <p  class="fw-bold fs-6">%</p>
-        <button class=" px-3 fs-4 border-0 text-white creat-bg-primary rounded-3">Save</button>
+        <button id="save-btn" class=" px-3 fs-4 border-0 text-white creat-bg-primary rounded-3">Save</button>
     </div>
 </div>
 
 <div class="text-center p-2">
-    <p class="fw-bold fs-5">Saving Amount: 7000</p>
-<p  class="fw-bold fs-5">Remaining Balance: 3000</p>
+    <p class="fw-bold fs-5">Saving Amount: <span id="saving-amount"> 7000</span></p>
+<p  class="fw-bold fs-5">Remaining Balance: <span id="remaining-balance">3000</span></p>
 </div>
 
 </div>
