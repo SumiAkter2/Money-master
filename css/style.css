@@ -1,12 +1,16 @@
+/* common section */
 boby{
     font-family: 'Poppins', sans-serif;
 }
+/* title color */
 .creat-color{
 color: rgb(133, 87, 240);
 }
+/* input field */
 .creat-input-color{
     background-color: rgb(212, 212, 214);
 }
+/* button color */
 .creat-bg-primary{
     background-color:rgb(133, 87, 240) ;
 }
