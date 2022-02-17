@@ -1,38 +1,36 @@
-console.log('success');
-
 
 function calculation( saving, saveAmount, remainBalance){
     // food, rent , cloth cost:
     let foodInput = document.getElementById('food-id').value;
-    console.log(foodInput);
+  
     let rentInput = document.getElementById('rent-id').value;
-    console.log(rentInput);
+    
     let clothInput = document.getElementById('cloth-id').value;
-    console.log(clothInput);
-    //  if(foodInput>0 && rentInput >0 && clothInput>0){
+    
+    
     let totalInput = parseInt(foodInput)+parseInt(rentInput)+parseInt(clothInput);
-//     console.log(totalInput);
+
 
 //  ----------total expenses:------
 const totalExpense = document.getElementById('total-expenses');
 const totalExpenseValue = totalExpense.innerText;
 totalExpense.innerText = "00";
 
-console.log(totalInput);
-
-if(foodInput<0 || rentInput<0 || clothInput<0){
-    document.getElementById('expenses-hide').style.display='block';
-} 
-  else{
-      document.getElementById('expenses-hide').style.display='none';
+ if(foodInput<0 || rentInput<0 || clothInput<0){
+     document.getElementById('expenses-hide').style.display='block';
+ } 
+   else{
+       document.getElementById('expenses-hide').style.display='none';
       totalExpense.innerText = totalInput;
   }
 // -----------income input show----------
 const incomeInput = document.getElementById('income-id').value;
 
-   if(incomeInput<foodInput || incomeInput<rentInput || incomeInput<clothInput) {
-     document.getElementById('expenses-hide').style.display='block';
- }
+// error section
+
+if(incomeInput<foodInput || incomeInput<rentInput || incomeInput<clothInput){
+    document.getElementById('expenses-hide').style.display='block';
+    }
   else{
      document.getElementById('expenses-hide').style.display='none';
       totalExpense.innerText = totalInput;
@@ -43,6 +41,7 @@ const balance = document.getElementById('balance');
 const balanceValue=balance.innerText;
 const totalBalance = parseInt(incomeInput)-totalInput;
 balance.innerText = "00";
+// error section:
   if(incomeInput<foodInput || incomeInput<rentInput || incomeInput<clothInput){
   document.getElementById('expenses-hide').style.display='block';
   }
@@ -79,8 +78,6 @@ else {
      saveAmountValue.innerText = savingCost;
      document.getElementById('hide-cuppon').style.display='none';
  }
-
-
 
 //--------after saving remaining balance section---------
 const remainingInput = document.getElementById(remainBalance);
