@@ -23,10 +23,10 @@ console.log(totalInput);
 if(foodInput<0 || rentInput<0 || clothInput<0){
     document.getElementById('expenses-hide').style.display='block';
 } 
-//  else{
-//      document.getElementById('expenses-hide').style.display='none';
-//      totalExpense.innerText = totalInput;
-//  }
+  else{
+      document.getElementById('expenses-hide').style.display='none';
+      totalExpense.innerText = totalInput;
+  }
 // -----------income input show----------
 const incomeInput = document.getElementById('income-id').value;
 
@@ -43,10 +43,10 @@ const balance = document.getElementById('balance');
 const balanceValue=balance.innerText;
 const totalBalance = parseInt(incomeInput)-totalInput;
 balance.innerText = "00";
- if(incomeInput<foodInput || incomeInput<rentInput || incomeInput<clothInput){
-    document.getElementById('expenses-hide').style.display='block';
- }
-else if(foodInput<0 || rentInput<0 || clothInput<0){
+  if(incomeInput<foodInput || incomeInput<rentInput || incomeInput<clothInput){
+  document.getElementById('expenses-hide').style.display='block';
+  }
+ if(foodInput<0 || rentInput<0 || clothInput<0){
     document.getElementById('expenses-hide').style.display='block';
 } 
 else{
